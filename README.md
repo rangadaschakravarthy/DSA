@@ -78,7 +78,6 @@ Every problem in this repository is explicitly tagged with one of nine levels:
 
 - 🧠 [**`problem-solving.md`**](file:///c:/Users/chakr/Downloads/DSA/problem-solving.md) — The 7-Step Problem Solving Framework for tackling unseen problems.
 - 📅 [**`30-day-plan.md`**](file:///c:/Users/chakr/Downloads/DSA/30-day-plan.md) — Comprehensive 30-Day Day-by-Day Learning Roadmap + Assessments.
-- 📊 [**`progress-tracker.md`**](file:///c:/Users/chakr/Downloads/DSA/progress-tracker.md) — Personal Topic & Level Mastery Progress Tracker.
 - 🧩 [**`patterns.md`**](file:///c:/Users/chakr/Downloads/DSA/patterns.md) — The Algorithmic Pattern Library (30+ core patterns with Python templates).
 - ⚡ [**`complexity-cheatsheet.md`**](file:///c:/Users/chakr/Downloads/DSA/complexity-cheatsheet.md) — Time/Space complexity analysis & Python internal costs.
 - 📝 [**`mistakes.md`**](file:///c:/Users/chakr/Downloads/DSA/mistakes.md) — Post-mortem mistake logger and error prevention guide.
