@@ -153,23 +153,19 @@
 
 ---
 
-## Level-9: Bitmask DP Foundations
+## Level-9: Extended Euclidean Algorithm & Chinese Remainder Theorem (CRT)
 
-### Problem 1: Traveling Salesperson Problem (TSP)
-- **Question**: Given an $N \times N$ distance matrix, find the minimum cost to visit all $N$ cities starting and ending at city 0.
-- **Description / Explanation**: Exact optimal solution using Bitmask State Dynamic Programming in $O(N^2 2^N)$ time.
+### Problem 1: Extended GCD & Chinese Remainder Theorem
+- **Question**: Given moduli $m_1, m_2, \dots, m_k$ (pairwise coprime) and remainders $r_1, r_2, \dots, r_k$, find the smallest non-negative integer $x$ satisfying $x \equiv r_i \pmod{m_i}$.
+- **Description / Explanation**: Use Extended Euclidean Algorithm to compute modular inverses and combine modular congruences using CRT.
 - **Approach & Logic**:
-  - `dp[mask][u]` = min cost to visit set of cities in `mask` ending at city `u`.
-  - Recurrence: `dp[mask | (1 << v)][v] = min(dp[mask][u] + dist[u][v])`.
+  - Extended GCD finds $x, y$ such that $a \cdot x + b \cdot y = \gcd(a, b)$.
+  - For $x \equiv r_i \pmod{m_i}$, compute total product $M = \prod m_i$, partial product $M_i = M / m_i$, and modular inverse $M_i^{-1} \pmod{m_i}$.
+  - $x = \left(\sum r_i \cdot M_i \cdot M_i^{-1}\right) \pmod M$.
 - **Sample Input**: 
-  ```python
-  dist = [
-      [0, 10, 15, 20],
-      [10, 0, 35, 25],
-      [15, 35, 0, 30],
-      [20, 25, 30, 0]
-  ]
-  ```
-- **Sample Output**: `80`
-- **Explanation**: Optimal tour: $0 \to 1 \to 3 \to 2 \to 0$ ($10 + 25 + 30 + 15 = 80$).
-- **Python Implementation**: [`level_9_bitmask_dp.py`](file:///c:/Users/chakr/Downloads/DSA/00-fundamentals/level_9_bitmask_dp.py)
+  - `num = [3, 5, 7]`
+  - `rem = [2, 3, 2]`
+- **Sample Output**: `23`
+- **Explanation**: $23 \equiv 2 \pmod 3$, $23 \equiv 3 \pmod 5$, $23 \equiv 2 \pmod 7$. Smallest positive integer solution is 23.
+- **Python Implementation**: [`level_9_chinese_remainder_theorem.py`](file:///c:/Users/chakr/Downloads/DSA/00-fundamentals/level_9_chinese_remainder_theorem.py)
+
